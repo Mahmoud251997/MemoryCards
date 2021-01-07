@@ -61,7 +61,6 @@ body {
     background: white;
 }
 
-
 .overlay-text {
     display: none;
     position: fixed;
@@ -78,12 +77,11 @@ body {
 .overlay-text.visible {
     display: flex;
     flex-direction: column;
-    animation: overlay-grow 500ms forwards;   
+    animation: overlay-grow 500ms forwards;
 }
 
 .overlay-text-small {
     font-size: .3em;
-
 }
 
 @keyframes overlay-grow {
@@ -97,7 +95,7 @@ body {
     }
 }
 
-@media (max-width : 660px) {
+@media (max-width: 660px) {
     .memory-game {
         width: 400px;
         height: 400px;
