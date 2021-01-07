@@ -1,76 +1,102 @@
-            * {
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
-            }
-            
-            h1 {
-                font-family: 'Aharoni';
-                color: black;
-                font-size: 100px;
-                margin: auto;
-                display: flex;
-                flex-wrap: wrap;
-            }
-            
-            body {
-                height: 100vh;
-                display: flex;
-                background-image: url(https://wallpapercave.com/uwp/uwp228903.jpeg);
-            }
-            
-            .memory-game {
-                width: 50%;
-                height: 50%;
-                margin: auto;
-                display: flex;
-                flex-wrap: wrap;
-                perspective: 1000px;
-            }
-            
-            .memory-card {
-                width: calc(10%);
-                height: calc(33.333% - 10px);
-                margin: 5px;
-                position: relative;
-                transform: scale(1);
-                transform-style: preserve-3d;
-                transition: transform .5s;
-                box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
-                justify-content: space-between;
-            }
-            
-            .memory-card:active {
-                transform: scale(0.97);
-                transition: transform .2s;
-            }
-            
-            .memory-card.flip {
-                transform: rotateY(180deg);
-            }
-            
-            .first,
-            .second {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                border-radius: 5px;
-                background: #ffffff;
-                backface-visibility: hidden;
-            }
-            
-            .first {
-                transform: rotateY(180deg);
-            }
-            
-            .button {
-                background-color: #272e3b;
-                color: aliceblue;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                font-size: 16px;
-                margin: 4px 2px;
-                width: 150px;
-                height: 50px;
-            }
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+.title {
+    color: #b32626;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+    font-family: Aharoni;
+}
+
+body {
+    margin: 0;
+    background-image: url(https://wallpapercave.com/uwp/uwp228903.jpeg);
+}
+
+.memory-game {
+    width: 803px;
+    height: 520px;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(25% - 67px);
+    height: calc(33.333% - 15px);
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotatey(180deg);
+    background: white;
+}
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #b32626;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+.overlay-text-small {
+    font-size: .3em;
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 10em;
+    }
+}
+
+@media (max-width: 600px) {
+    .memory-game {
+        grid-template-columns: repeat(2, auto);
+    }
+}

@@ -6,8 +6,8 @@ let firstCard, secondCard;
 
 function flipCard() {
     
-    if (lockBoard) return;
-    if (this === firstCard) return; // condition to avoid when you click twice over the same card gonna disable the cards by removing its event listener and remain flipped
+    if (lockBoard) return; // return from the function if lock board is true so the rest wonn't executed.
+    if (this === firstCard) return; // when you click twice on the same card it will return the function.
 
    this.classList.add('flip');
    if (!hasFlippedCard) {  //the played clicked first card
@@ -37,7 +37,8 @@ function disableCards() {
 }
 
 function unflipCards() {
-    lockBoard = true;
+    lockBoard = true; // unlocked when the cards finish on flipping
+
     setTimeout(() => {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');  
@@ -47,7 +48,7 @@ function unflipCards() {
 }
 
 
-function resetBoard() {  // to let you click the card you have clicked befor
+function resetBoard() {  // to let our condition to work after each round.
     hasFlippedCard = false;
     lockBoard = false;
     firstCard = null;
@@ -56,7 +57,7 @@ function resetBoard() {  // to let you click the card you have clicked befor
 
 (function shuffle() { // when you refresh the site or enter the level agin it will shuffle the cards
     cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 16);
+        let randomPos = Math.floor(Math.random() * 36);
         card.style.order = randomPos;
     });
 })(); //warp it inside a parenthesis and net next repair parenthesis to end of it that makes the function it will executed right after the player get in the or refresh it
