@@ -57,7 +57,7 @@ function resetBoard() {  // to let our condition to work after each round.
 
 (function shuffle() { // when you refresh the site or enter the level agin it will shuffle the cards
     cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 16);
+        let randomPos = Math.floor(Math.random() * 36);
         card.style.order = randomPos;
     });
 })(); //warp it inside a parenthesis and net next repair parenthesis to end of it that makes the function it will executed right after the player get in the or refresh it

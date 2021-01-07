@@ -1,31 +1,29 @@
-            * {
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
-            }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1 {
+     font-family: 'Aharoni';
+     color: black;
+     font-size: 100px;
+     margin: auto;
+     display: flex;
+     flex-wrap: wrap;
+   }
+body {
+       height: 100vh;
+       display: flex;
+       background-image: url(https://wallpapercave.com/uwp/uwp228903.jpeg);
+     }
             
-            h1 {
-                font-family: 'Aharoni';
-                color: black;
-                font-size: 100px;
-                margin: auto;
-                display: flex;
-                flex-wrap: wrap;
-            }
-            
-            body {
-                height: 100vh;
-                display: flex;
-                background-image: url(https://wallpapercave.com/uwp/uwp228903.jpeg);
-            }
-            
-            .memory-game {
-                width: 50%;
-                height: 50%;
-                margin: auto;
-                display: flex;
-                flex-wrap: wrap;
-                perspective: 1000px;
+.memory-game {
+               width: 50%;
+               height: 50%;
+               margin: auto;
+               display: flex;
+               flex-wrap: wrap;
+               perspective: 1000px;
             }
             
             .memory-card {
