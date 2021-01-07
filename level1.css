@@ -60,3 +60,14 @@ body {
     transform: rotatey(180deg);
     background: white;
 }
+
+.button {
+    background-color: #12709c;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+}
