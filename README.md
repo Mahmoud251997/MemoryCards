@@ -17,9 +17,11 @@ when you click on any card it will be fliped , you have to choose another card t
 
 Instructers:<br>
 1.Choose A Level.<br>
-2.Start flipping the cards.<br>
-3.If you find matching cards,they will be displayed.<br>
-4.the game will end when you flip all the matching cards.<br>
+2.click to start.<br>
+3.Start flipping the cards.<br>
+4.If you find matching cards,they will be displayed.<br>
+5.the game will end when you flip all the matching cards.<br>
+
 ---
 
 level 1 :
