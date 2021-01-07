@@ -4,6 +4,12 @@
 Memory Cards is a game that strengthens your ability of remembering.
 ---
 
+![Screenshot (10)](https://user-images.githubusercontent.com/70974294/103888483-7f692300-50ed-11eb-93f5-04712225ce64.png)
+
+
+
+
+
 When you open the site you will see the name of the game and the levels(1/2),<br>
 level 1 it's the easy one and level 2 is the hardest.<br>
 when you click on any card it will be fliped , you have to choose another card that matches it.<br>
