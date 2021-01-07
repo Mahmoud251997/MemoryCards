@@ -20,7 +20,19 @@ Instructers:<br>
 2.Start flipping the cards.<br>
 3.If you find matching cards,they will be displayed.<br>
 4.the game will end when you flip all the matching cards.<br>
+---
 
+level 1 :
+
+![Screenshot (13)](https://user-images.githubusercontent.com/70974294/103888753-e981c800-50ed-11eb-8cbe-28dc184ffcea.png)
+
+
+---
+level 2 :
+
+![Screenshot (14)](https://user-images.githubusercontent.com/70974294/103888760-ed154f00-50ed-11eb-9a95-fdadd350bf95.png)
+
+---
 
 *There is no limited-time.<br>
 *The game is for one player.<br>
