@@ -1,27 +1,30 @@
 const cards = document.querySelectorAll('.memory-card');
 
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
-function flipCard() {
-    
-    if (lockBoard) return; // return from the function if lock board is true so the rest wonn't executed.
-    if (this === firstCard) return; // when you click twice on the same card it will return the function.
 
-   this.classList.add('flip');
-   if (!hasFlippedCard) {  //the played clicked first card
+   function flipCard() {
+
+      if (lockBoard) return; // return from the function if lock board is true so the rest wonn't executed.
+      if (this === firstCard) return; // when you click twice on the same card it will return the function.
+
+       this.classList.add('flip');
+      if (!hasFlippedCard) {  //the played clicked first card
       hasFlippedCard = true;
       firstCard = this;
 
       return;
-   } 
-   //second click
+      } 
+     //second click
    
-   secondCard = this;  
+     secondCard = this;  
 
-   checkForMatch();
-}  
+      checkForMatch();
+   }  
+
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.img === secondCard.dataset.img;
@@ -64,9 +67,16 @@ function resetBoard() {  // to let our condition to work after each round.
 
 
 
-
-
-
-
-
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+
+overlays.forEach(overlay => {
+    overlay.addEventListener('click', () => {
+        overlay.classList.remove('visible');
+        var myAudio = document.createElement("audio");
+        myAudio.src = "sounds/StartGame.mp3";
+        myAudio.play();
+
+    });
+});

@@ -97,8 +97,18 @@ body {
     }
 }
 
-@media (max-width : 600px) {
+@media (max-width : 660px) {
     .memory-game {
-        grid-template-columns: repeat(2, auto);
+        width: 400px;
+        height: 400px;
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+        perspective: 1000px;
+        margin-left: 19px;
     }
 }
+
+
+
+
