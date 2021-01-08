@@ -12,11 +12,24 @@ body {
 }
 
 .title {
-    color: #b32626;
+    color: #142950e3;
+    margin-left: -20px;
     font-weight: normal;
     text-align: center;
     font-size: 6em;
     font-family: Aharoni;
+}
+
+.game-info {
+    color: #142950e3;
+    margin-left: -20px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 3em;
+    font-family: Aharoni;
+    
+
+
 }
 
 .memory-game {
@@ -71,7 +84,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 100;
-    color: #b32626;
+    color: #ffffff;
 }
 
 .overlay-text.visible {
@@ -104,6 +117,12 @@ body {
         flex-wrap: wrap;
         perspective: 1000px;
         margin-left: 19px;
+    }
+    .overlay-text {
+        font-size: 3em;
+    }
+    .title {
+        margin-left: 58px;
     }
 }
 
