@@ -5,6 +5,8 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let timer = document.getElementById('time-remain');
+let ticker = document.getElementById('flips');
 
 startGameS = document.createElement("audio");
 startGameS.src = "sounds/StartGame.mp3";
@@ -34,15 +36,13 @@ overlays.forEach(overlay => {   // make click event to remove visisble word to d
 
 
 
-
-
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 
-   function flipCard() {   
-    
-    
+   function flipCard() {
+      
+
       if (lockBoard) return; // return from the function if lock board is true so the rest wonn't executed.
       if (this === firstCard) return; // when you click twice on the same card it will return the function.
 
@@ -83,11 +83,12 @@ function disableCards() {
 
 function unflipCards() {
     flipSound.play();
-    lockBoard = true;  // unlocked when the cards finish on flipping    
+    lockBoard = true;
+    wrongAs.play();  // unlocked when the cards finish on flipping    
     setTimeout(() => {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip'); 
-    wrongAs.play();
+    
     resetBoard();
 
   }, 800)
