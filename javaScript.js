@@ -7,7 +7,7 @@ let timer = document.getElementById("time-remain");
 let ticker = document.getElementById("flips");
 let flips = 0;
 let matchedCardsArr = [];
-let timeRemain = 60;
+let timeRemain = Number(timer.textContent);
 let counter;
 
 startGameS = document.createElement("audio");
