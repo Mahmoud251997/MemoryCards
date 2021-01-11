@@ -1,102 +1,111 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .title {
-    color: #b32626;
-    font-weight: normal;
-    text-align: center;
-    font-size: 6em;
-    font-family: Aharoni;
+  color: #b32626;
+  font-weight: normal;
+  text-align: center;
+  font-size: 6em;
+  font-family: Aharoni;
+}
+
+.game-info {
+  color: #142950e3;
+  margin-left: -20px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 3em;
+  font-family: Aharoni;
 }
 
 body {
-    margin: 0;
-    background-image: url(https://wallpapercave.com/uwp/uwp228903.jpeg);
+  margin: 0;
+  background-image: url(https://wallpapercave.com/uwp/uwp228903.jpeg);
 }
 
 .memory-game {
-    width: 803px;
-    height: 520px;
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-    perspective: 1000px;
+  width: 803px;
+  height: 520px;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  perspective: 1000px;
 }
 
 .memory-card {
-    width: calc(25% - 67px);
-    height: calc(33.333% - 15px);
-    position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform .5s;
+  width: calc(25% - 67px);
+  height: calc(33.333% - 15px);
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
 }
 
 .memory-card:active {
-    transform: scale(.97);
-    transition: transform .2s;
+  transform: scale(0.97);
+  transition: transform 0.2s;
 }
 
 .memory-card.flip {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .front-face,
 .back-face {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    position: absolute;
-    border-radius: 5px;
-    backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
 }
 
 .front-face {
-    transform: rotatey(180deg);
-    background: white;
+  transform: rotatey(180deg);
+  background: white;
 }
 
 .overlay-text {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    color: #b32626;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #b32626;
 }
 
 .overlay-text.visible {
-    display: flex;
-    flex-direction: column;
-    animation: overlay-grow 500ms forwards;
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
 }
 
 .overlay-text-small {
-    font-size: .3em;
+  font-size: 0.3em;
 }
 
 @keyframes overlay-grow {
-    from {
-        background-color: rgba(0, 0, 0, 0);
-        font-size: 0;
-    }
-    to {
-        background-color: rgba(0, 0, 0, 0.8);
-        font-size: 10em;
-    }
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 10em;
+  }
 }
 
 @media (max-width: 600px) {
-    .memory-game {
-        grid-template-columns: repeat(2, auto);
-    }
+  .memory-game {
+    grid-template-columns: repeat(2, auto);
+  }
 }
