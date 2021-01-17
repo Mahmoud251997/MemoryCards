@@ -10,13 +10,16 @@
 
   <body>
     <h1 class="title">Level1</h1>
-    <div class="game-info">Time <span id="time-remain">60</span></div>
+    <div class="game-info">Time <span id="time-remain">5</span></div>
     <div class="game-info">Flips <span id="flips">0</span></div>
-    <div class="overlay-text visible">Click To Start</div>
-    <span class="overlay-text-small" onclick="location='main.html'"
-      >Click to Exit</span
-    >
-    <div id="game-over-text" class="overlay-text">
+    <div class="overlay-text visible">
+      Click To Start
+      <span class="overlay-text-small" onclick="location='main.html'"
+        >Click to Exit</span
+      >
+    </div>
+
+    <div id="game-over-text" class="overlay-text-flag">
       GAME OVER
       <span class="overlay-text-small" onclick="location='level1.html'"
         >Click to Restart</span
@@ -25,7 +28,7 @@
         >Click to Exit</span
       >
     </div>
-    <div id="victory-text" class="overlay-text">
+    <div id="victory-text" class="overlay-text-flag">
       VICTORY
       <span class="overlay-text-small" onclick="location='level1.html'"
         >Click to Restart</span

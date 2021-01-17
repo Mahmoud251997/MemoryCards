@@ -33,7 +33,6 @@ overlays.forEach((overlay) => {
     //startSound.play();
     gameOverS.pause();
     startGameS.play();
-
     startCountDown();
   });
 });
@@ -103,11 +102,14 @@ function startCountDown() {
   counter = setInterval(() => {
     timeRemain -= 1;
     timer.textContent = timeRemain;
-    if (timeRemain === 0) gameOver();
+    if (timeRemain === 0) {
+      gameOver();
+    }
   }, 1000);
 }
 
 function gameOver() {
+  gameOverflag = true;
   clearInterval(counter);
   gameOverS.play();
   document.getElementById("game-over-text").classList.add("visible");

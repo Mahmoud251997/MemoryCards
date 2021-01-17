@@ -71,7 +71,8 @@ body {
   background: white;
 }
 
-.overlay-text {
+.overlay-text,
+.overlay-text-flag {
   display: none;
   position: fixed;
   top: 0;
@@ -84,7 +85,8 @@ body {
   color: #ffffff;
 }
 
-.overlay-text.visible {
+.overlay-text.visible,
+.overlay-text-flag.visible {
   display: flex;
   flex-direction: column;
   animation: overlay-grow 500ms forwards;
