@@ -10,9 +10,14 @@
 
   <body>
     <h1 class="title">Level1</h1>
-    <div class="game-info">Time <span id="time-remain">60</span></div>
+    <div class="game-info">Time <span id="time-remain">4</span></div>
     <div class="game-info">Flips <span id="flips">0</span></div>
-    <div class="overlay-text visible">Click To Start</div>
+    <div class="overlay-text visible">
+      Click To Start
+      <span class="overlay-text-small" onclick="location='main.html'"
+        >Click to Exit</span
+      >
+    </div>
     <div id="game-over-text" class="overlay-text">
       GAME OVER
       <span class="overlay-text-small" onclick="location='level1.html'"
@@ -31,6 +36,10 @@
         >Click to Exit</span
       >
     </div>
+    <form>
+      <button>Exit</button>
+      <button>Pause</button>
+    </form>
     <section class="memory-game">
       <div class="memory-game">
         <div class="memory-card" data-img="facebook">

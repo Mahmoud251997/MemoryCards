@@ -33,6 +33,7 @@ overlays.forEach((overlay) => {
     //startSound.play();
     gameOverS.pause();
     startGameS.play();
+
     startCountDown();
   });
 });

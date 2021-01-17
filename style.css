@@ -1,30 +1,50 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .button {
-    background-color: #0f919c;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
+  background-color: #0f919c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
 }
 
 body {
-    background-image: url(https://thewallpaper.co/wp-content/uploads/2020/07/texture-wallpaper-hd-pictures-images.jpg);
-    color: #ffffff;
-    font-family: 'Aharoni';
-    font-size: 40px;
+  background-image: url(https://thewallpaper.co/wp-content/uploads/2020/07/texture-wallpaper-hd-pictures-images.jpg);
+  color: #ffffff;
+  font-family: "Aharoni";
+  font-size: 40px;
+  text-align: center;
+}
+
+@media (max-width: 660px) {
+  html {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 87%;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
