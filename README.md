@@ -36,7 +36,6 @@ level 2 :
 
 ---
 
-*There is no limited-time.<br>
 *The game is for one player.<br>
 *The game can be for all ages.<br>
 *Free- costs no money.<br>
